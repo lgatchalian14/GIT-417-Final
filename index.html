@@ -3,64 +3,136 @@
     <head>
         <meta charset="utf-8">
         <meta name="author" content="Levin Gatchalian">
-        <meta name="description" content="This site is about">
-        <!-- <link rel="shortcut icon" content=""> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <script src="scripts.js"></script>
 
-        <title>The Krusty Krab - GIT417 Final Project</title>
+        <title> Nintendo - GIT417 Final Project</title>
     </head>
     <body>
-        <a id="skip" href="#main-content">Skip to Main Content</a>
-
         <header>
-            <a href="index.html" id="logo"><img src="#" alt="Krusty Krab Logo from Spongebob Squarepants"></a>
-            <h1>The Krusty Krab</h1>
+            <a href="index.html" id="logo"><img src="images/nintendo_logo.png" alt="Nintendo Logo"></a>
+            <h1 class="hideMe">Nintendo</h1>
+            <nav>
+                <h2 class="hideMe">Main</h2>
+                <ul>
+                    <li><a href="#game">Game</a></li>
+                    <li><a href="#displaySoon">Coming Soon</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
 
+        <main>
+            <!-- Featured Games / Game of the Year Nominees -->
+            <section id="featured">
+                <h2>Featured</h2>
+        
+                <p>Super Mario Bros. Wonder</p>
+                
+                <img src="images/smbwonder.jpg" alt="Image of Super Mario Bros. Wonder">
+                <div>
+                    <h3>Nominated For:</h3>
+                    <ul>
+                        <li>Game of the Year</li>
+                        <li>Best Multiplayer Game</li>
+                        <li>Best Family Game</li>
+                        <li>Best Art Direction</li>
+                        <li>Best Game Direction</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- NUMBER GUESSING GAME -->
+            <section id="game">
+                <h2>Can you guess the number?</h2>
+                <p>Play for a chance to win a free copy of Super Mario Bros. Wonder!</p>
+
+                <p>Simple. Pick a number between <span class="emphasize">1</span> and <span class="emphasize">10</span>.</p>
+                <input type="number" id="userGuess" min="1" max="10">
+                <button id="submitButton">Submit</button>
+
+                <p id="result"></p>
+            </section>
+
+            <!-- PRODUCT DISPLAY -->
+            <section id="displaySoon">
+                <h2>Coming Soon</h2>
+
+                <!-- Products -->
+                <div class="product" id="product1">
+                    <h3>Prince of Persia The Lost Crown</h3>
+                    <img src="images/prince-of-persia.jpg" alt="Prince of Persia The Lost Crown Banner Image">
+                    <p>Dash into a stylish and thrilling action-adventure platformer set in a mythological Persian world where the boundaries of time and space are yours to manipulate.</p>
+                    <p class="release">Releases: 1/18/24</p>
+                </div>
+                    
+                <div class="product" id="product2">
+                    <h3>Mario vs. Donkey Kong&trade;</h3>
+                    <img src="images/mario-v-dk.jpg" alt="Mario vs. Donkey Kong Banner Image">
+                    <p>Become Gotham City’s ultimate protector across the iconic Batman: Arkham Trilogy.</p>
+                    <p class="release">Releases: 2/16/24</p>
+                </div>
+                    
+                <div class="product" id="product3">
+                    <h3>Princess Peach&trade;: Showtime</h3>
+                    <img src="images/peach-showtime.jpg" alt="Princess Peach: Showtime Banner Image">
+                    <p>Princess Peach’s trip to the Sparkle Theater goes off script when the wicked Grape and the Sour Bunch steal the show! <br>
+                        Partner with the theater’s guardian, Stella, to call curtains on this tragedy by using a powerful ribbon and taking on several starring roles—each with their own look and abilities.</p>
+                    <p class="release">Releases: 3/22/24</p>
+                </div>
+
+                <div class="controls">
+                    <button id="prod-1">Prince of Persia The Lost Crown</button>
+                    <button id="prod-2">Mario vs. Donkey Kong&trade;</button>
+                    <button id="prod-3">Princess Peach&trade;: Showtime</button>
+                </div>
+
+            </section>
 
 
             <!-- CONTACT FORM -->
             <section id="contact">
-                <h3>Contact Us</h3>
-                <form method="post" action="#">
-                <!-- Full Name -->
-                    <div id="fullName">
-                        <label for="fName">First Name <span class="required">*</span></label>
-                        <input type="text" name="fName" id="fName" placeholder="First Name" required>
+                <h2>Contact Us</h2>
 
-                        <label for="lName">Last Name <span class="required">*</span></label>
-                        <input type="text" name="lName" id="lName" placeholder="Last Name" required>
-                    </div>
-                <!-- Phone Number -->
-                    <div id="phone">
-                        <label for="phoneNumber">Phone Number <span class="required">*</span></label>
-                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
-                    </div>
-                <!-- Email Address -->
-                    <div id="email">
+                <form method="POST" action="submit" id="form">
 
-                    </div>
-                <!-- Comments -->
-                    <div id="comments">
-                        <label for="yourComments">Comments <span class="required">*</span></label>
-                        <input type="tel" name="yourComments" id="yourComments" placeholder="Comments" required>
-                    </div>
-                <!-- Preferred Method of Contact -->
-                    <div id="preferred">
-                        <fieldset>
-                            <legend>Preferred Contact Method <span class="required">*</span></legend>
-                            <input id="prefPhone">
-                        </fieldset>
-                    </div>
-                <!-- Submit -->
-                    <input type="submit" name="submit" id="submit" value="Submit">
+                    <!-- Full Name -->
+                    <label for="full-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="full-name" name="Name" required>
+                        
+                    <!-- Phone Number -->
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="Phone" required>  
+
+                    <!-- Email Address -->
+                    <label for="email-address">Email Address</label>
+                    <input type="email" id="email-address" name="Email">
+                        
+                    <!-- Comments -->
+                    <label for="comments">Comments</label>
+                    <textarea id="comments"></textarea>
+                        
+                    <fieldset>
+                        <legend>Preferred Contact Method</legend>
+
+                        <input id="phone" type="radio" name="pref-contact" value="phone">
+                        <label for="phone">Phone</label>
+
+                        <input id="email" type="radio" name="pref-contact" value="email">
+                        <label for="email">Email</label>
+                    </fieldset>
+
+                    <div id="errors"></div>           
+                    <input type="submit" value="Submit" id="formSubmit">
+                    
                 </form>
             </section>
         </main>
         <footer>
-            <p><small>Copyright &copy; 2023</small></p>
+            <p><small>Copyright &copy; Nintendo 2023 | GIT 417 Final Project</small></p>
         </footer>
     </body>
 </html>
