@@ -6,12 +6,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="images/Mario_emblem_inverted_favicon.svg">
+        
         <link href="styles.css" rel="stylesheet">
+
         <script src="scripts.js"></script>
 
-        <title> Nintendo - GIT417 Final Project</title>
+        <title>Nintendo | GIT417 Final Project</title>
     </head>
     <body>
+        <!-- LIGHT/DARK MODE -->
+        <button class="toggleMode" id="toggleButton">Toggle Mode</button>
+        <script src="scripts.js"></script>
+
         <header>
             <a href="index.html" id="logo"><img src="images/nintendo_logo.png" alt="Nintendo Logo"></a>
             <h1 class="hideMe">Nintendo</h1>
@@ -30,7 +37,7 @@
             <section id="featured">
                 <h2>Featured</h2>
         
-                <p>Super Mario Bros. Wonder</p>
+                <p>Super Mario Bros.&trade; Wonder</p>
                 
                 <img src="images/smbwonder.jpg" alt="Image of Super Mario Bros. Wonder">
                 <div>
@@ -48,15 +55,18 @@
             <!-- NUMBER GUESSING GAME -->
             <section id="game">
                 <h2>Can you guess the number?</h2>
-                <p>Play for a chance to win a free copy of Super Mario Bros. Wonder!</p>
+                <p>Play for a chance to win a free copy of Super Mario Bros.&trade; Wonder!</p>
 
-                <p>Simple. Pick a number between <span class="emphasize">1</span> and <span class="emphasize">10</span>.</p>
+                <p>It's Simple! Pick a number between <span class="emphasize">1</span> and <span class="emphasize">10</span>.</p>
                 <input type="number" id="userGuess" min="1" max="10">
                 <button id="submitButton">Submit</button>
-
                 <p id="result"></p>
+
+                
+                <script src="scripts.js"></script>
             </section>
 
+            
             <!-- PRODUCT DISPLAY -->
             <section id="displaySoon">
                 <h2>Coming Soon</h2>
@@ -66,30 +76,31 @@
                     <h3>Prince of Persia The Lost Crown</h3>
                     <img src="images/prince-of-persia.jpg" alt="Prince of Persia The Lost Crown Banner Image">
                     <p>Dash into a stylish and thrilling action-adventure platformer set in a mythological Persian world where the boundaries of time and space are yours to manipulate.</p>
-                    <p class="release">Releases: 1/18/24</p>
+                    <p class="release">Releases: January 18, 2024</p>
                 </div>
                     
                 <div class="product" id="product2">
                     <h3>Mario vs. Donkey Kong&trade;</h3>
                     <img src="images/mario-v-dk.jpg" alt="Mario vs. Donkey Kong Banner Image">
-                    <p>Become Gotham City’s ultimate protector across the iconic Batman: Arkham Trilogy.</p>
-                    <p class="release">Releases: 2/16/24</p>
+                    <p>The rivalry that originally heated up on the Game Boy™ Advance system reignites on the Nintendo Switch&trade; system with newly-added co-op play and updated visuals.</p>
+                    <p class="release">Releases: February 16, 2024</p>
                 </div>
                     
                 <div class="product" id="product3">
-                    <h3>Princess Peach&trade;: Showtime</h3>
-                    <img src="images/peach-showtime.jpg" alt="Princess Peach: Showtime Banner Image">
+                    <h3>Princess Peach&trade;: Showtime!</h3>
+                    <img src="images/peach-showtime.jpg" alt="Princess Peach: Showtime! Banner Image">
                     <p>Princess Peach’s trip to the Sparkle Theater goes off script when the wicked Grape and the Sour Bunch steal the show! <br>
                         Partner with the theater’s guardian, Stella, to call curtains on this tragedy by using a powerful ribbon and taking on several starring roles—each with their own look and abilities.</p>
-                    <p class="release">Releases: 3/22/24</p>
+                    <p class="release">Releases: March 22, 2024</p>
                 </div>
 
-                <div class="controls">
-                    <button id="prod-1">Prince of Persia The Lost Crown</button>
-                    <button id="prod-2">Mario vs. Donkey Kong&trade;</button>
-                    <button id="prod-3">Princess Peach&trade;: Showtime</button>
+                <div class="buttons">
+                    <button id="button1">Prince of Persia The Lost Crown</button>
+                    <button id="button2">Mario vs. Donkey Kong&trade;</button>
+                    <button id="button3">Princess Peach&trade;: Showtime</button>
                 </div>
 
+                <script src="script.js"></script>
             </section>
 
 
@@ -97,19 +108,19 @@
             <section id="contact">
                 <h2>Contact Us</h2>
 
-                <form method="POST" action="submit" id="form">
+                <form method="POST" action="submit" id="siteForm">
 
                     <!-- Full Name -->
-                    <label for="full-name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="full-name" name="Name" required>
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="Name" required>
                         
                     <!-- Phone Number -->
-                    <label for="phone-number">Phone Number</label>
-                    <input type="tel" id="phone-number" name="Phone" required>  
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="Phone" required>  
 
                     <!-- Email Address -->
-                    <label for="email-address">Email Address</label>
-                    <input type="email" id="email-address" name="Email">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" id="emailAddress" name="Email">
                         
                     <!-- Comments -->
                     <label for="comments">Comments</label>
@@ -125,10 +136,11 @@
                         <label for="email">Email</label>
                     </fieldset>
 
-                    <div id="errors"></div>           
+                    <span id="errors"></span>           
                     <input type="submit" value="Submit" id="formSubmit">
-                    
                 </form>
+
+                <script src="script.js"></script>
             </section>
         </main>
         <footer>

@@ -57,10 +57,13 @@ table {
 :root{
 	--yellow: #FDD611;
 	--red: #E60012;
+
 	--dark-gray: #333333;
 	--off-white: #F0F0F0;
+
     --white: #ffffff;
     --black: #000000;
+	
 	font-size: 20px;
 }
 
@@ -71,6 +74,7 @@ body{
     width: 1280px;
 	margin: 0 auto;
 	background-color: var(--white);
+	color: var(--black);
 	display: block;
 	line-height: 1.3rem;
 }
@@ -96,6 +100,19 @@ p {
 }
 
 
+/* LIGHT / DARK */
+.darkMode {
+	--white: #333333;
+    --black: #ffffff;
+}
+.toggleMode {
+	position: relative;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+
+
 /* HEADER, MAIN STYLES */
 header {
 	background-image: linear-gradient(var(--white), var(--off-white));
@@ -115,6 +132,10 @@ nav ul{
 header img {
 	width: 120px;
 }
+header button {
+	border: none;
+	background-color: none;
+}
 nav li {
 	margin: 10px;
 }
@@ -133,6 +154,29 @@ main section {
 	display: block;
 	margin: 0 auto;
 	width: 70%;
+	box-shadow: -4px 4px 20px var(--dark-gray);
+}
+
+
+
+/* GAME PLAY STYLES */
+#game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+input[type="number"], button {
+	padding: 8px;
+	margin: 2px;
+	width: 10%;
+}
+button {
+	cursor: pointer;
+}
+  
+#result {
+	font-weight: bold;
+	color: #333;
 }
 
 
@@ -169,22 +213,6 @@ main section {
 	justify-content: center;
 	align-items: center;
 }
-
-
-
-/* GAME PLAY STYLES */
-#game {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-#game input, #game button {
-	width: 10%;
-}
-#game button {
-	text-align: center;
-}
-
 
 
 /* CONTACT FORM STYLES */
